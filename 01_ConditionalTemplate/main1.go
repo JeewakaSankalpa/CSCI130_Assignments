@@ -14,12 +14,12 @@ type loginInfo struct {
 func main(){
 	logindata := loginInfo{userName:"Admin",password : "password" , loginSuccess: false}
 
-	var user,passwrod string
+	var user,pass string
 	fmt.Println("Enter user Name : ")
 	fmt.Scan(&user)
 	fmt.Println("Enter Password : ")
-	fmt.Scan(&passwrod)
-	if user==logindata.userName && passwrod == logindata.password {
+	fmt.Scan(&pass)
+	if (user==logindata.userName && pass == logindata.password) {
 		logindata.loginSuccess = true
 	}
 	welcome, err := template.ParseFiles("welcome.html")
